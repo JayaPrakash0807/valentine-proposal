@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day - Enna Kalyanam Pannipiya?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">❤️ Our Love Story</h1>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#gallery">Memories</a></li>
+                <li><a href="#video">Message</a></li>
+                <li><a href="#letters">Love Letters</a></li>
+                <li><a href="#quiz">Namma Journey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="love-years">Valentine's Day 💕 Pondati<br><span class="love-meaning">Nee illama oru naal kuda illa... Un kooda eppavum irukanum 💑</span></p>
+            <h1 class="hero-title">Enna Kalyanam Pannipiya 💍💐?</h1>
+            <p class="hero-subtitle">True Care, True Bond , True Love  ❤️</p>
+            <div class="proposal-buttons">
+                <button id="yesBtn" class="btn-yes" onclick="handleYes()">Seri da! 👰🏻‍♀️🤵🏻💍</button>
+                <button id="noBtn" class="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()">Illa</button>
+            </div>
+        </div>
+        <div class="floating-hearts">
+            <span>❤️</span>
+            <span>💕</span>
+            <span>💖</span>
+            <span>💗</span>
+            <span>💝</span>
+            <span>🖤</span>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">𓍯𓂃𓏧♡ Namma Beautiful Memories 𓍯𓂃𓏧♡</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./IMG_20160530_201042.jpg" alt="Memory 1">
+                    <div class="gallery-overlay">
+                        <p>First  - Ellam Inga Dhan Start Aachu</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./IMG20200214171410.jpg" alt="Memory 2">
+                    <div class="gallery-overlay">
+                        <p>First  - Namma Thaniya Meet Pannadhu </p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./IMG-20240310-WA0060.jpg" alt="Memory 3">
+                    <div class="gallery-overlay">
+                        <p>Husbend & Wife Moments - Indha Pic Paakum Bodhu</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./IMG-20240310-WA0062.jpg" alt="Memory 4">
+                    <div class="gallery-overlay">
+                        <p>Happy Moments - Namma Santhosham</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./IMG-20240615-WA0002.jpg" alt="Memory 5">
+                    <div class="gallery-overlay">
+                        <p>Forever Love - En Uyir Nee</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./IMG-20250511-WA0001.jpg" alt="Memory 6">
+                    <div class="gallery-overlay">
+                        <p>Madurai - Eppavum Nee Dhan</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-upload" onclick="document.getElementById('photoUpload').click()">📷 Namma Photos Add Pannu</button>
+            <input type="file" id="photoUpload" accept="image/*" multiple style="display:none">
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2 class="section-title">Our LOVE Journy</h2>
+            <div class="video-container">
+                <video controls poster="w=800" height="500px">
+                    <source src="./lv_0_20230917015400.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button class="btn-upload">🎥 Un Video Upload Pannu</button>
+        </div>
+    </section>
+
+    <section id="letters" class="letters">
+        <div class="container">
+            <h2 class="section-title">Love Letters & Namma Promise</h2>
+            <div class="letters-grid">
+                <div class="letter-card">
+                    <div class="letter-header">
+                        <h3>💌 En Promise Unakku</h3>
+                        <span class="letter-date">February 14, 2026</span>
+                    </div>
+                    <div class="letter-content">
+                        <p>En Pondati,</p>
+                        <p>Nee en life la vandha moment lerndhu, en life eh change aagiduchu. Nee illama oru naal kuda imagine panna mudiyala. Un sirippu, un care, un love - ellame en life oda part aagiduchu.</p>
+                        <p>10 years aa namma love panrom, aana innum kooda un kooda irukanum nu thonudhu. Nee en koodave irundhaa, enna problem vandhaalum face panna ready. Un dreams ah achieve panna naan eppavum un kooda irupen.</p>
+                        <p>Nee dhan en world, en happiness, en everything. Un kooda life long irukanum, un care pananum, un love pananum - adhu dhan en aasai.</p>
+                        <p>Enna kalyanam pannipiya ma? 💍</p>
+                        <p class="letter-signature">Eppavum un Kooda<br>Jai Mama ❤️</p>
+                    </div>
+                </div>
+                <div class="letter-card">
+                    <div class="letter-header">
+                        <h3>✍️ Un Letter Ezhudhu</h3>
+                    </div>
+                    <div class="letter-form">
+                        <textarea id="customLetter" placeholder="Un manasulayum irukuradha ezhudhu..."></textarea>
+                        <button class="btn-primary" onclick="saveLetter()">Letter Save Pannu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2 class="section-title">Namma Pathi Evlo Theriyum?</h2>
+            <div class="quiz-container">
+                <div id="quizContent" class="quiz-content">
+                    <div class="quiz-question active">
+                        <h3>Question 1: Namma enga first time meet panninom?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-correct="true">Trichy Function</button>
+                            <button class="quiz-option">Dream la</button>
+                            <button class="quiz-option">Virudhunagar</button>
+                            <button class="quiz-option">Online la</button>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>Question 2: Namma first date enna?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option">Malaikottai</button>
+                            <button class="quiz-option" data-correct="true">Murugan Temple Virudhunagar</button>
+                            <button class="quiz-option">Kamaliya Garden</button>
+                            <button class="quiz-option">Movie and Bike Ride</button>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>Question 3: Namma favorite activity enna?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option">Serndhu cooking</button>
+                            <button class="quiz-option">Movies paakuradhu</button>
+                            <button class="quiz-option" data-correct="true">Travel pannuradhu</button>
+                            <button class="quiz-option">Gaming</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button id="prevBtn" class="btn-secondary" disabled>Previous</button>
+                    <span id="quizProgress">1 / 3</span>
+                    <button id="nextBtn" class="btn-secondary">Next</button>
+                </div>
+                <div id="quizResult" class="quiz-result" style="display:none;">
+                    <h3>Un Score: <span id="score">0</span>/3</h3>
+                    <p id="resultMessage"></p>
+                    <button class="btn-primary" onclick="restartQuiz()">Marupadiyum Try Pannu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ En life oda love kaga</p>
+            <p class="footer-date">February 14, 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
