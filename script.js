@@ -31,34 +31,43 @@ updateCountdown();
 
 // Yes/No Button Functionality
 function handleYes() {
-    const heroContent = document.querySelector('.hero-content');
-    heroContent.innerHTML = `
-        <h1 class="hero-title" style="animation: fadeInUp 1s ease;">Therinjudhu Nee Seri Nu Solluva Nu! 💍🎉</h1>
-        <p class="hero-subtitle" style="animation: fadeInUp 1s ease 0.3s backwards;">Nee dhan en world la romba happy person! ❤️</p>
-        <div class="countdown" style="animation: fadeInUp 1s ease 0.6s backwards;">
-            <h3>Namma Special Day Varaikum</h3>
-            <div class="countdown-timer">
-                <div class="time-unit">
-                    <span id="days">00</span>
-                    <p>Days</p>
-                </div>
-                <div class="time-unit">
-                    <span id="hours">00</span>
-                    <p>Hours</p>
-                </div>
-                <div class="time-unit">
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
-                <div class="time-unit">
-                    <span id="seconds">00</span>
-                    <p>Seconds</p>
+    // Show proposal GIF animation
+    const gifOverlay = document.createElement('div');
+    gifOverlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; display: flex; align-items: center; justify-content: center;';
+    gifOverlay.innerHTML = '<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJ5dGZvZHN5aGJ6OHFxZnN6dGJ6cWJ6dGJ6cWJ6dGJ6cWJ6dGJ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26u4cqiYI30juCOGY/giphy.gif" style="max-width: 90%; max-height: 90%; border-radius: 20px;">';
+    document.body.appendChild(gifOverlay);
+    
+    setTimeout(() => {
+        gifOverlay.remove();
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.innerHTML = `
+            <h1 class="hero-title" style="animation: fadeInUp 1s ease;">Therinjudhu Nee Seri Nu Solluva Nu! 💍🎉</h1>
+            <p class="hero-subtitle" style="animation: fadeInUp 1s ease 0.3s backwards;">Nee dhan en world la romba happy person! ❤️</p>
+            <div class="countdown" style="animation: fadeInUp 1s ease 0.6s backwards;">
+                <h3>Namma Special Day Varaikum</h3>
+                <div class="countdown-timer">
+                    <div class="time-unit">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-unit">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <p>Seconds</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+        `;
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }, 3000);
 }
 
 function moveNoButton() {
