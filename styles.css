@@ -267,6 +267,27 @@ section {
     transition: transform 0.3s;
 }
 
+.gallery-item.blurred img {
+    filter: blur(20px);
+    transition: filter 0.5s;
+}
+
+.blur-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.gallery-item:not(.blurred) .blur-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .gallery-item:hover {
     transform: scale(1.05);
 }

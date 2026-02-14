@@ -286,3 +286,8 @@ function addGuestMessage() {
 if (questions.length > 0) {
     showQuestion(0);
 }
+
+// Unblur gallery images
+function unblurImage(element) {
+    element.classList.remove('blurred');
+}
